@@ -1,0 +1,107 @@
+
+// create user
+POST  http://localhost:9000/user
+Content-Type:application/json
+
+{
+    "name" : "karina login  1",
+    "email": "karina9@gmail.com",
+    "password" : "12342",
+    "confPassword" : "12342",
+    "role" : "user"
+}
+
+###
+
+//get all users
+GET  http://localhost:9000/users
+
+
+
+###
+
+//get single user
+GET  http://localhost:9000/users/ed289245-bc3c-4c36-a194-77260dbcb945
+
+###
+
+// updated user 
+PATCH   http://localhost:9000/users/ed289245-bc3c-4c36-a194-77260dbcb945
+Content-Type:application/json
+
+{
+    "name" : "karina updated",
+    "email": "karina9@gmail.com",
+    "password" : "",
+    "confPassword" : "",
+    "role" : "user"
+}
+
+### 
+// deleted user
+DELETE    http://localhost:9000/users/69cb7f47-e813-4f82-9928-bdf509bc4a3a
+
+
+
+
+###
+
+//login user 
+
+POST  http://localhost:9000/login
+Content-Type:application/json
+
+{
+    "email": "karina9@gmail.com",
+    "password" : "12342"
+}
+###
+//login admin
+
+POST  http://localhost:9000/login
+Content-Type:application/json
+
+{
+    "email": "pancamaulana09@gmail.com",
+    "password" : "12342"
+}
+###
+
+GET  http://localhost:9000/me
+###
+//logout
+DELETE   http://localhost:9000/logout
+
+### 
+//product
+// get all prduct
+GET  http://localhost:9000/products
+
+###
+//get single producst 
+GET  http://localhost:9000/products/9cf39230-637b-47d8-b55b-19def8f4e5c1
+
+###
+// post dataa product 
+POST http://localhost:9000/products
+Content-Type:application/json
+
+{
+    "name": "product  admin",
+    "price" : 1245
+}
+###
+// update data product
+PATCH  http://localhost:9000/products/9cf39230-637b-47d8-b55b-19def8f4e5c1
+Content-Type:application/json
+
+{
+    "name": "product  admin UPDATED",
+    "price" : 999
+}
+
+
+
+###
+# delete data product 
+DELETE  http://localhost:9000/products/9cf39230-637b-47d8-b55b-19def8f4e5c1
